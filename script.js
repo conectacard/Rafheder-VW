@@ -176,11 +176,6 @@ function cerrarMenu() {
     document.querySelectorAll('.sucursal-panel-content').forEach(panel => panel.style.display = 'none');
 }
 
-function cerrarMenu() {
-    document.getElementById('miMenuContacto').style.display = 'none';
-    document.querySelectorAll('.sucursal-panel-content').forEach(panel => panel.style.display = 'none');
-}
-
 function toggleSucursalAcordeon(sucKey) {
     playClick();
     const panel = document.getElementById(`${sucKey}-panel`);
