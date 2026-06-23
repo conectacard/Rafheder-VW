@@ -169,10 +169,11 @@ function openNetworkCard(url) { playClick(); window.open(url, '_blank'); }
 function abrirMenu() {
     playClick();
     
-    // MEJORA: Enlaza el mapa superior con la ubicación exacta de CONFIG.maps de la agencia
+    // Aquí se llama directamente al link de tu CONFIG.maps (https://maps.app.goo.gl/EjXcrp2N6VLkBkTG9)
     const mapaInteractivo = document.getElementById('mapa-interactivo');
     if (mapaInteractivo && CONFIG && CONFIG.maps) {
-        mapaInteractivo.src = `https://maps.google.com/maps?q=${encodeURIComponent(CONFIG.maps)}&output=embed`;
+        // Tomamos tu link exacto y le agregamos el formato de incrustación para que Google NO rechace la conexión
+        mapaInteractivo.src = CONFIG.maps + "&output=embed";
     }
     
     document.getElementById('miMenuContacto').style.display = 'flex';
